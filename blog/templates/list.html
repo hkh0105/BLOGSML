@@ -1,0 +1,16 @@
+<h1>Blog Project</h1>
+<a href="{%url 'new' %}">글쓰기</a>
+{% for blog in blogs%}
+<hr>
+<a href="{%url 'detail' blog.id%}">
+{{blog.title}}
+<br>
+{{blog.pub_date}}
+<br>
+{{blog.summary}}
+<br>
+{{blog.id}}
+<br>
+<img src="{{blog.image.url}}">
+
+{% endfor %}
